@@ -28,9 +28,16 @@ export default {
 </script>
 
 <style lang="scss">
+$break: 600px;
+
 .main {
+  @media (max-width: $break) {
+    margin: 0;
+  }
   margin: 40px;
-  width: 800px;
+  
+  width: 100%;
+  max-width: $break;
   flex-grow: 1;
   text-align: center;
 
@@ -66,9 +73,9 @@ export default {
   }
 
   section {
+    flex-grow: 1;
     border-top: none;
     border-bottom: none;
-    flex-grow: 1;
     color: $color-dark;
   }
 
