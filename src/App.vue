@@ -8,6 +8,7 @@
     <section>
       <word-input></word-input>
       <word-list></word-list>
+      <synonym-list></synonym-list>
     </section>
 
     <footer>
@@ -19,9 +20,10 @@
 <script>
 import WordInput from './WordInput'
 import WordList from './WordList'
+import SynonymList from './SynonymList'
 
 export default {
-  components: { WordInput, WordList }
+  components: { WordInput, WordList, SynonymList }
 }
 </script>
 
