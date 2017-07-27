@@ -1,3 +1,5 @@
+import synonyms from './synonyms'
+
 export default {
   state: {
     words: [],
@@ -15,6 +17,17 @@ export default {
     },
     setSynonyms (state, synonyms) {
       state.synonyms = synonyms
+    }
+  },
+
+  actions: {
+    addWord ({ commit, state }, word) {
+      commit('addWord', word)
+      commit('setSynonyms', synonyms(state.words))
+    },
+    removeWord ({ commit, state }, word) {
+      commit('removeWord', word)
+      commit('setSynonyms', synonyms(state.words))
     }
   }
 }

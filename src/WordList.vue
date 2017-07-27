@@ -14,7 +14,7 @@ export default {
 
   methods: {
     removeWord (word) {
-      this.$store.commit('removeWord', word)
+      this.$store.dispatch('removeWord', word)
     }
   }
 }

@@ -18,7 +18,7 @@ export default {
         .replace(/[^a-z -]/g, '')
         .trim()
 
-      this.$store.commit('addWord', word)
+      this.$store.dispatch('addWord', word)
       this.newWord = ''
     }
   }
