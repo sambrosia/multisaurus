@@ -1,6 +1,7 @@
 export default {
   state: {
-    words: []
+    words: [],
+    synonyms: []
   },
 
   mutations: {
@@ -11,8 +12,9 @@ export default {
       const index = state.words.indexOf(word)
       if (index < 0) return
       state.words.splice(index, 1)
+    },
+    setSynonyms (state, synonyms) {
+      state.synonyms = synonyms
     }
-  },
-
-  actions: {}
+  }
 }
