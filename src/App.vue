@@ -4,9 +4,12 @@
       <h1>multisaurus</h1>
       <p>(the best saurus)</p>
     </header>
+
     <section>
       <input v-model="wordInput" placeholder="Type a word and press enter" @keydown.enter="addWord">
+      <word-list :words="words"></word-list>
     </section>
+
     <footer>
       Created by <a href="https://github.com/sambrosia">Sam Woodruff</a>
     </footer>
@@ -14,9 +17,11 @@
 </template>
 
 <script>
-// import synonyms from 'synonyms'
+import WordList from './WordList'
 
 export default {
+  components: { WordList },
+
   data () {
     return {
       wordInput: '',
@@ -26,9 +31,19 @@ export default {
 
   methods: {
     addWord () {
-      const word = this.wordInput.toLowerCase()
-      if (!this.words.includes(word)) this.words.push(word)
+      const word = this.wordInput
+        .toLowerCase()
+        .replace(/\s+/g, ' ')
+        .replace(/[^a-z ]/g, '')
+        .trim()
+
+      if (word !== '' && !this.words.includes(word)) this.words.push(word)
       this.wordInput = ''
+    },
+    removeWord (word) {
+      const index = this.words.indexOf(word)
+      if (index < 0) return
+      this.words.splice(index, 1)
     }
   }
 }
