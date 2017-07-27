@@ -15,7 +15,7 @@ export default {
       const word = this.newWord
         .toLowerCase()
         .replace(/\s+/g, ' ')
-        .replace(/[^a-z ]/g, '')
+        .replace(/[^a-z -]/g, '')
         .trim()
 
       this.$store.commit('addWord', word)
