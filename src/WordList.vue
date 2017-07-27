@@ -7,7 +7,16 @@
 <script>
 export default {
   name: 'word-list',
-  props: ['words']
+
+  computed: {
+    words () { return this.$store.state.words }
+  },
+
+  methods: {
+    removeWord (word) {
+      this.$store.commit('removeWord', word)
+    }
+  }
 }
 </script>
 
