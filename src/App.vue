@@ -5,7 +5,7 @@
       <p>(the best saurus)</p>
     </header>
     <section>
-      <input type="text" placeholder="Enter a word to add to the list">
+      <input v-model="wordInput" placeholder="Type a word and press enter" @keydown.enter="addWord">
     </section>
     <footer>
       Created by <a href="https://github.com/sambrosia">Sam Woodruff</a>
@@ -16,7 +16,22 @@
 <script>
 // import synonyms from 'synonyms'
 
-export default {}
+export default {
+  data () {
+    return {
+      wordInput: '',
+      words: []
+    }
+  },
+
+  methods: {
+    addWord () {
+      const word = this.wordInput.toLowerCase()
+      if (!this.words.includes(word)) this.words.push(word)
+      this.wordInput = ''
+    }
+  }
+}
 </script>
 
 <style lang="scss">
@@ -44,6 +59,7 @@ input {
   border-radius: $border-radius;
   box-sizing: border-box;
   transition: border-color $transition-time;
+  font-family: inherit;
 
   &:focus {
     border-color: $color-primary;
