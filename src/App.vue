@@ -6,8 +6,8 @@
     </header>
 
     <section>
-      <input v-model="wordInput" placeholder="Type a word and press enter" @keydown.enter="addWord">
-      <word-list :words="words"></word-list>
+      <word-input></word-input>
+      <word-list></word-list>
     </section>
 
     <footer>
@@ -17,27 +17,11 @@
 </template>
 
 <script>
+import WordInput from './WordInput'
 import WordList from './WordList'
 
 export default {
-  components: { WordList },
-
-  data () {
-    return { wordInput: '' }
-  },
-
-  methods: {
-    addWord () {
-      const word = this.wordInput
-        .toLowerCase()
-        .replace(/\s+/g, ' ')
-        .replace(/[^a-z ]/g, '')
-        .trim()
-
-      this.$store.commit('addWord', word)
-      this.wordInput = ''
-    }
-  }
+  components: { WordInput, WordList }
 }
 </script>
 
