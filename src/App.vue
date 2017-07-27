@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="main">
     <header>
       <h1>multisaurus</h1>
       <p>(the best saurus)</p>
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style lang="scss">
-.content {
+.main {
   margin: 40px;
   width: 800px;
   flex-grow: 1;
