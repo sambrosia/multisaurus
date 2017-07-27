@@ -18,9 +18,9 @@
 </template>
 
 <script>
-import WordInput from './WordInput'
-import WordList from './WordList'
-import SynonymList from './SynonymList'
+import WordInput from './components/WordInput'
+import WordList from './components/WordList'
+import SynonymList from './components/SynonymList'
 
 export default {
   components: { WordInput, WordList, SynonymList }
@@ -35,7 +35,7 @@ $break: 600px;
     margin: 0;
   }
   margin: 40px;
-  
+
   width: 100%;
   max-width: $break;
   flex-grow: 1;
