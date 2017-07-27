@@ -1,6 +1,6 @@
 <template>
   <div class="synonym-list">
-    <div class="synonym" v-for="synonym in synonyms">
+    <div class="synonym" v-for="synonym in synonyms" @click="addWord(synonym)">
       {{synonym}}
     </div>
   </div>
