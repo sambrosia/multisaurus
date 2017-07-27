@@ -23,10 +23,7 @@ export default {
   components: { WordList },
 
   data () {
-    return {
-      wordInput: '',
-      words: []
-    }
+    return { wordInput: '' }
   },
 
   methods: {
@@ -37,13 +34,8 @@ export default {
         .replace(/[^a-z ]/g, '')
         .trim()
 
-      if (word !== '' && !this.words.includes(word)) this.words.push(word)
+      this.$store.commit('addWord', word)
       this.wordInput = ''
-    },
-    removeWord (word) {
-      const index = this.words.indexOf(word)
-      if (index < 0) return
-      this.words.splice(index, 1)
     }
   }
 }
