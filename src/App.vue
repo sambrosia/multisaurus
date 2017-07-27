@@ -35,38 +35,6 @@ export default {
 </script>
 
 <style lang="scss">
-html {
-  background: $color-bg;
-  font: 13px 'Slabo 13px', sans-serif;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100vw;
-  min-height: 100vh;
-}
-
-h1 {
-  font: 48px 'Josefin Slab', serif;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  border: $border;
-  border-radius: $border-radius;
-  box-sizing: border-box;
-  transition: border-color $transition-time;
-  font-family: inherit;
-
-  &:focus {
-    border-color: $color-primary;
-    outline: none;
-  }
-}
-
 .content {
   margin: 40px;
   width: 800px;
