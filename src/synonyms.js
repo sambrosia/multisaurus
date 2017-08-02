@@ -6,7 +6,7 @@ const cache = {
 
 export default (words) => {
   if (words.length < 1) return []
-  const allSynonyms = []
+  const allSynonyms = {}
 
   for (let word in words) {
     word = words[word]
@@ -19,8 +19,9 @@ export default (words) => {
       for (let synonym in raw[type]) {
         synonym = raw[type][synonym]
 
-        if (synonym.length > 1 && allSynonyms.indexOf(synonym) < 0) {
-          allSynonyms.push(synonym)
+        if (synonym.length > 1) {
+          if (allSynonyms[synonym]) allSynonyms[synonym]++
+          else allSynonyms[synonym] = 0
         }
       }
     }
