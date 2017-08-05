@@ -1,7 +1,7 @@
 <template>
   <div class="synonym-list">
-    <div class="synonym" v-for="synonym in synonyms" @click="addWord(synonym)">
-      {{synonym}}
+    <div class="synonym" v-for="(rank, synonym) in synonyms" :key="synonym" @click="addWord(synonym)">
+      {{synonym}} ({{rank}})
     </div>
   </div>
 </template>

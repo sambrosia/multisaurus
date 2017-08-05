@@ -3,7 +3,7 @@ import synonyms from './synonyms'
 export default {
   state: {
     words: [],
-    synonyms: []
+    synonyms: {}
   },
 
   mutations: {
