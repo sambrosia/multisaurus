@@ -1,7 +1,7 @@
 <template>
   <div class="synonym-list">
-    <div class="synonym" v-for="(rank, synonym) in synonyms" :key="synonym" @click="addWord(synonym)">
-      {{synonym}} ({{rank}})
+    <div class="synonym" v-for="synonym in synonyms" :key="synonym" @click="addWord(synonym)">
+      {{synonym}}
     </div>
   </div>
 </template>
@@ -11,7 +11,12 @@ export default {
   name: 'word-list',
 
   computed: {
-    synonyms () { return this.$store.state.synonyms }
+    synonyms () {
+      const synonyms = this.$store.state.synonyms
+      return Object.keys(synonyms).sort((a, b) => {
+        return synonyms[b] - synonyms[a]
+      })
+    }
   },
 
   methods: {
