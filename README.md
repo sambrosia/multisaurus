@@ -3,4 +3,4 @@
 **multi** `/ˈməltē/`
 *prefix*: more than one; many;
 
-Multisaurus is a thesaurus that takes a *list* of words as input. It then draws from multiple sources to help you find just the right word.
+Multisaurus is a thesaurus that takes a list of words as input, and returns the most relevant synonyms.
