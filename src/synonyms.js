@@ -1,5 +1,8 @@
 import synonyms from 'synonyms'
 
+// TODO: Query Wiktionary (and others?)
+// TODO: Clean up misplaced commas (???) in results
+
 const cache = {
   local: {}
 }

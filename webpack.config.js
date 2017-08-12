@@ -6,9 +6,9 @@ module.exports = {
   context: __dirname,
   entry: './src',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs/dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: 'bundle.js'
   },
 
   resolve: {
@@ -63,10 +63,12 @@ module.exports = {
   ],
 
   devtool: 'cheap-module-source-map',
-  stats: {
-    modules: false
-  },
+  stats: { modules: false },
   devServer: {
+    contentBase: path.resolve(__dirname, 'docs'),
+    publicPath: '/dist/',
+    host: '0.0.0.0',
+    historyApiFallback: true,
     quiet: true,
     hot: true
   }
