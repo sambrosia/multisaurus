@@ -62,7 +62,7 @@ module.exports = {
     new FriendlyErrors()
   ],
 
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'cheap-module-source-map',
   stats: {
     modules: false
   },
