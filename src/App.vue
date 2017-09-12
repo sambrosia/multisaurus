@@ -72,8 +72,8 @@ $break: 600px;
       fill: $color-primary;
 
       &:hover {
-        color: darken($color-primary, 10);
-        fill: darken($color-primary, 10);
+        color: $color-primary-dark;
+        fill: $color-primary-dark;
       }
     }
   }
