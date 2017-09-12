@@ -10,7 +10,7 @@ const plugins = [
   new CleanPlugin('dist', { root }), // Clear output before building again
   new HtmlPlugin({ template: 'src/index.html' }), // Generate html
   new webpack.optimize.CommonsChunkPlugin({ // Extract infrequently changed modules
-    names: ['vendor', 'runtime']
+    names: ['vendor', 'synonyms', 'runtime']
   })
 ]
 

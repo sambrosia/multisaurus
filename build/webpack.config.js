@@ -9,6 +9,7 @@ export default {
   context,
   entry: {
     main: './src',
+    synonyms: 'synonyms',
     vendor: [ 'vue', 'vuex' ]
   },
   output: {
