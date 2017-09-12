@@ -25,5 +25,19 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
+input {
+  width: 100%;
+  padding: 10px;
+  border: $border;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  transition: border-color $transition-time;
+  font-family: inherit;
+
+  &:focus {
+    border-color: $color-primary;
+    outline: none;
+  }
+}
 </style>
