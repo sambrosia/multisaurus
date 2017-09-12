@@ -1,6 +1,10 @@
-import synonyms from './synonyms'
+import Vue from 'vue'
+import Vuex from 'vuex'
+import synonyms from '../synonyms'
 
-export default {
+Vue.use(Vuex)
+
+const config = {
   state: {
     words: [],
     synonyms: {}
@@ -31,3 +35,5 @@ export default {
     }
   }
 }
+
+export default new Vuex.Store(config)
