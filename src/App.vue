@@ -2,7 +2,7 @@
   <div class="main">
     <header>
       <h1>multisaurus</h1>
-      <p>(the best saurus)</p>
+      <span>(the best saurus)</span>
     </header>
 
     <section>
@@ -52,16 +52,13 @@ $break: 600px;
   flex-direction: column;
 
   header {
-    overflow: auto;
+    padding: 24px;
     border-radius: $border-radius $border-radius 0 0;
     background: $color-primary;
     color: white;
 
     h1 {
-      margin-bottom: 0;
-    }
-    p {
-      margin-top: 0;
+      margin: 0;
     }
   }
 
