@@ -41,6 +41,7 @@ $break: 600px;
   @media (max-width: $break) {
     margin: 0;
   }
+
   margin: 40px;
 
   width: 100%;
@@ -52,6 +53,10 @@ $break: 600px;
   flex-direction: column;
 
   header {
+    @media (max-width: $break) {
+      border-radius: 0;
+    }
+
     padding: 24px;
     border-radius: $border-radius $border-radius 0 0;
     background: $color-primary;
